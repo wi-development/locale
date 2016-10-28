@@ -57,6 +57,12 @@ class Locale extends Model
     return $this->hasMany('WI\User', 'locale_id', 'id');
   }
 
+	//Locale hasMany Users
+	public function companies()
+	{
+		return $this->hasMany('WI\Core\Company', 'company_id', 'id');
+	}
+
   public function sitemap(){
 
     return $this->hasMany('WI\SitemapTranslation', 'locale_id', 'id');
